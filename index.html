@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="script.js" defer></script>
+    <title>CRUDS System</title>
+  </head>
+  <body>
+    <header class="header container">
+      <h1>CRUDS</h1>
+      <p>Product Management System</p>
+    </header>
+    <main>
+      <section class="inputs container">
+        <form action="#" class="input-data">
+          <input type="text" placeholder="title" id="title" />
+          <div class="price">
+            <input type="number" placeholder="price" id="price" />
+            <input type="number" placeholder="taxes" id="taxes" />
+            <input type="number" placeholder="ads" id="ads" />
+            <input type="number" placeholder="discount" id="discount" />
+            <div class="total">total: 0</div>
+          </div>
+          <input type="number" placeholder="count" id="count" />
+          <input type="text" placeholder="category" id="category" />
+          <button type="submit" id="add-data">Create</button>
+        </form>
+      </section>
+      <section class="outputs container">
+        <form action="#" class="search-block">
+          <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search..." />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <button type="button" id="delete-all">Delete All(0)</button>
+        </form>
+      </section>
+      <div class="table-container">
+        <table class="table-data container">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>Title</th>
+              <th>Price</th>
+              <th>Taxes</th>
+              <th>Ads</th>
+              <th>Discount</th>
+              <th>Total</th>
+              <th>Category</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody class="Products-list"></tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
