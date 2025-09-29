@@ -2,7 +2,6 @@
   --max-width-container: 1400px;
   --padding-inline-container: 16px;
   --light-blue: #3B82F6;
-  /* --light-blue: #2563eb; */
   --color-green: #22c55e;
   --light-gray: #f9fafb;
   --dark-gray: #1f2937;
@@ -112,22 +111,21 @@ input:focus {
 .table-container .table-data {
   width: 100%;
   text-align: center;
+  border-collapse: collapse;
+  margin-bottom: 20px;
 }
-.table-container .table-data thead {
+.table-container .table-data thead tr {
   background: #80808059;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
-.table-container .table-data :where(th,td)  {
-  padding: 12px 16px;
+.table-container .table-data :where(th,td) {
+  padding: 12px 12px;
   text-align: center;
-  border-bottom: 1px solid #e5e7eb;
-  border-left: 1px solid #e5e7eb;
+  border: 1px solid #e5e7eb;
 }
-.table-container .table-data th:last-child,
-.table-container .table-data td:last-child {
-  border-right:  1px solid #e5e7eb;
+.table-container .table-data tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
 }
 .table-container .table-data button {
   padding: 6px 12px;
