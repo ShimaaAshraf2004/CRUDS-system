@@ -1,4 +1,4 @@
-📌 Project Description
+#📌 Project Description
 
 This is a simple CRUDS (Create, Read, Update, Delete, Search) product management system built with HTML, CSS, and JavaScript.
 It allows users to:
