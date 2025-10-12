@@ -59,7 +59,7 @@ const renderIDs = () => {
 
 const calculateTotal = (priceValue, taxesValue, adsValue, discountValue) => {
   const totalValue = (Number(priceValue) + Number(taxesValue) + Number(adsValue)) - Number(discountValue || 0);
-  if(totalValue === 0) {
+  if(totalValue <= 0) {
     total.textContent = `Total: 0`;
     total.style.backgroundColor = "#ef4444";
   } else {
@@ -68,6 +68,10 @@ const calculateTotal = (priceValue, taxesValue, adsValue, discountValue) => {
   }
   return totalValue;
 };
+
+const checkTotal = (value) => {
+  return value <= 0 ? "0" : value;
+}
 
 const createProductElement = (product) => {
   const tr = document.createElement("tr");
@@ -78,7 +82,7 @@ const createProductElement = (product) => {
     <td>${product.taxes}</td>
     <td>${product.ads}</td>
     <td>${product.discount}</td>
-    <th>${product.total}</th>
+    <th>${checkTotal(product.total)}</th>
     <td>${product.category}</td>
     <td><button type="button" class="update">Update</button></td>
     <td><button type="button" class="delete">Delete</button></td>
